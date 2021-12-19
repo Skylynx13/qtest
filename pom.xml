@@ -12,6 +12,27 @@
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
     </properties>
+
+    <!--    Copy xml, properties files to target -->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -31,5 +52,12 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.6.3.Final</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations -->
+        <!-- can be omitted, included in core       -->
+        <!--        <dependency>-->
+        <!--            <groupId>org.hibernate</groupId>-->
+        <!--            <artifactId>hibernate-annotations</artifactId>-->
+        <!--            <version>3.5.6-Final</version>-->
+        <!--        </dependency>-->
     </dependencies>
 </project>

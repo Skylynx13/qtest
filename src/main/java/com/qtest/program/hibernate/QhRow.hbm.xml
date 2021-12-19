@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.qtest.program.hibernate">
+    <!-- Use full package path name here, or set package in hibernate-mapping tag. -->
+    <class name="QhRow" table="qhiber">
+        <meta attribute="class-description">
+            This class contains the qhrow detail.
+        </meta>
+        <id name="id" type="int" column="id">
+        <!-- not using auto_increment           <generator class="native"/>-->
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="timestamp" column="timestamp" type="timestamp"/>
+        <property name="note" column="note" type="string"/>
+    </class>
+</hibernate-mapping>
